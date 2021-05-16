@@ -38,7 +38,7 @@ class LoginController extends Controller
             $getCustomerName = Register::where("login_id",'=',$getLoginId)->pluck('name');
         }
         
-        var_dump($getCustomerName["name"]);
+        // var_dump($getCustomerName["name"]);
         
         if ($username == $getUsername && $password == $getPassword) {
            
