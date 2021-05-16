@@ -66,10 +66,11 @@ class RegisterController extends Controller
         
         if ($getUsername->toArray() == array()) {
             
-             $login = new Login;
+            $login = new Login;
             $login->username = $username;
             $login->password = $password;
             $login->status = "u";
+            $loginid = $login->id;
             $login->save();
 
 
@@ -78,14 +79,15 @@ class RegisterController extends Controller
            $addr->field2 = $af2;
            $addr->field3 = $af3;
            $addr->field4 = $af4;
+           $addressid = $addr->id;
            $addr->save();
 
            $register = new Register;
            $register->name = $name;
            $register->email = $email;
            $register->phone = $phone;
-           $register->login_id = $login->id;
-           $register->addr_id = $addr->id;
+           $register->login_id = $loginid;
+           $register->addr_id = $addressid;
            $register->save();
            echo "Registration Successful...";
           
