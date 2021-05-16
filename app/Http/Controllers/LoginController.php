@@ -34,7 +34,7 @@ class LoginController extends Controller
         }
         $getCustomerName = "";
         if ($getUsername) {
-            $getCustomerName = Register::where("login_id",'=',$getLoginId)->pluck('name')[0];
+            $getCustomerName = Register::where("id",'=',$getLoginId)->pluck('name')[0];
         }
         
         
