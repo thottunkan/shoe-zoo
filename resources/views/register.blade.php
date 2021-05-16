@@ -77,12 +77,12 @@
             </tr>
             <tr>
               <td>
-                <input type="text" required class="form-control" id="password" name="password" placeholder="Password">
+                <input type="password" required class="form-control" id="password" name="password" placeholder="Password">
               </td>
             </tr>
             <tr>
               <td>
-                <input type="text" required class="form-control" id="cpassword" name="cpassword" placeholder="Confirm Password">
+                <input type="password" required class="form-control" id="cpassword" name="cpassword" placeholder="Confirm Password">
               </td>
             </tr>
             <tr>
