@@ -42,7 +42,7 @@ class LoginController extends Controller
         
         if ($username == $getUsername && $password == $getPassword) {
            
-            $req->session()->put("name",$getCustomerName);
+            $req->session()->put("name",$getCustomerName[0]);
             $req->session()->put("loginId",$getLoginId);
             return redirect('home');
             
