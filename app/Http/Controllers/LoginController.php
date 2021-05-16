@@ -38,12 +38,12 @@ class LoginController extends Controller
             $getCustomerName = Register::where("login_id",'=',$getLoginId)->pluck('name');
         }
         
-        
+        var_dump($getCustomerName);
         
         if ($username == $getUsername && $password == $getPassword) {
            
-            $req->session()->put("name",$getCustomerName[0]);
-            $req->session()->put("loginId",$getLoginId);
+           // $req->session()->put("name",$getCustomerName[0]);
+             $req->session()->put("loginId",$getLoginId);
             return redirect('home');
             
         }
