@@ -51,7 +51,7 @@
       <div class="col-md-12">
           <table class="table table-borderless">
             <form action="/regcustomer" method="POST">
-           
+              {{-- {{ csrf_field() }} --}}
             <thead>
               <td>
                 <h1 class="text-white font-monospace">Register</h1>
@@ -131,7 +131,7 @@
                    var af4 = $("#af4").val();
                    
                    var csrf = $("#csrf").html();
-                   alert("csrf "+csrf);
+                   //alert("csrf "+csrf);
                    
                    $.ajax({
                      headers:{

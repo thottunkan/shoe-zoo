@@ -66,7 +66,7 @@ class RegisterController extends Controller
         
         if ($getUsername->toArray() == array()) {
             
-             $login = new Login;
+            $login = new Login;
             $login->username = $username;
             $login->password = $password;
             $login->status = "u";
@@ -80,12 +80,22 @@ class RegisterController extends Controller
            $addr->field4 = $af4;
            $addr->save();
 
+           $lgid = Login::where("username",'=',$username)->pluck('id');
+           $adid = Address::all()->where('field1','=',$af1)
+                         ->where('field2','=',$af2)
+                         ->where('field3','=',$af3)
+                         ->where('field4','=',$af4)->pluck('id');
+          $login_id = $lgid[0];
+          $address_id = $adid[0];
+        //   echo $login_id;
+        //   echo $address_id;
+                 
            $register = new Register;
            $register->name = $name;
            $register->email = $email;
            $register->phone = $phone;
-           $register->login_id = $login->id;
-           $register->addr_id = $addr->id;
+           $register->login_id = $login_id;
+           $register->addr_id = $address_id;
            $register->save();
            echo "Registration Successful...";
           
