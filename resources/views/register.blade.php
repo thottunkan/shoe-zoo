@@ -51,7 +51,7 @@
       <div class="col-md-12">
           <table class="table table-borderless">
             <form action="/regcustomer" method="POST">
-              {{ csrf_field() }}
+              {{-- {{ csrf_field() }} --}}
             <thead>
               <td>
                 <h1 class="text-white font-monospace">Register</h1>
@@ -108,7 +108,7 @@
             <tr>
 
               <td>
-                <input type="submit"  id="registerbt" value="Register" class="btn btn-dark text-white form-control">
+                <input type="button"  id="registerbtn" value="Register" class="btn btn-dark text-white form-control">
               </td>
             </tr>
           </form>
