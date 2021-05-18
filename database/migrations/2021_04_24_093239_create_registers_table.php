@@ -15,7 +15,7 @@ class CreateRegistersTable extends Migration
     {
         Schema::create('registers', function (Blueprint $table) {
             
-            $table->bigIncrements('reg_id');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('email');
             $table->string('phone');
